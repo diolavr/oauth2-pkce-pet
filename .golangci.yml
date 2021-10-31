@@ -1,0 +1,64 @@
+linters:
+  # please, do not use `enable-all`: it's deprecated and will be removed soon.
+  # inverted configuration with `enable-all` and `disable` is not scalable during updates of golangci-lint add //nolint  to skip lint
+  disable-all: true
+  enable:
+    - bodyclose
+    - errcheck
+    - gocritic
+    - gosec
+    - goimports
+    - gosimple
+    - revive
+    - whitespace
+    - govet
+    - goconst
+    - gomnd
+    - staticcheck
+    - nolintlint
+    - unconvert
+    - deadcode
+    - asciicheck
+    - depguard
+    - dogsled
+    - dupl
+    - exhaustive
+    - funlen
+    - gochecknoinits
+    - gocyclo
+    - golint
+    - goprintffuncname
+    - ineffassign
+    - misspell
+    - nakedret
+    - noctx
+    - rowserrcheck
+    - scopelint
+    - structcheck
+    - stylecheck
+    - typecheck
+    - unparam
+    - unused
+    - varcheck
+    - gochecknoglobals
+    - gocognit
+    - godot
+    - godox
+    - goerr113
+    - maligned
+    - nestif
+    - prealloc
+    - testpackage
+    - wsl
+
+
+run:
+  skip-dirs:
+    - test
+
+severity:
+  default-severity: critical
+  rules:
+    - linters:
+      - errcheck
+      severity: info
